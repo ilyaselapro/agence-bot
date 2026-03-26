@@ -1,9 +1,10 @@
 import logging
+import os
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, ConversationHandler, filters, ContextTypes
 
-BOT_TOKEN = “7788151587:AAFWYIIxkIsp8wZ1_m8Missi1JWSmai3ZS8”
-OWNER_ID = 922766851
+BOT_TOKEN = os.environ.get(“BOT_TOKEN”)
+OWNER_ID = int(os.environ.get(“OWNER_ID”))
 
 logging.basicConfig(format=”%(asctime)s - %(levelname)s - %(message)s”, level=logging.INFO)
 
